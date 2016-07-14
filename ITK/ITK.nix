@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, cmake }:
+{ stdenv, fetchurl, cmake, git, cacert }:
 
 stdenv.mkDerivation rec {
   name = "${pname}-${version}";
@@ -11,12 +11,15 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     cmake 
+    git
   ];
 
+  GIT_SSL_CAINFO = "${cacert}/etc/ssl/certs/ca-bundle.crt";
+
   cmakeFlags = [
-    "-DModule_ITKDCMTK=ON"
-    "-DModule_ITKIODCMTK=On"
-  ]
+      "-DModule_ITKDCMTK=ON"
+      "-DModule_ITKIODCMTK=ON"
+  ];
 
   meta = {
     description = "Medical imaging processing library.";
