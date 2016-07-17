@@ -1,11 +1,12 @@
-{ stdenv, fetchurl, cmake, git, cacert }:
+{ stdenv, fetchFromGitHub, cmake, ITK, SlicerExecutionModel }:
 
 stdenv.mkDerivation rec {
   name = "${pname}-${version}";
-  pname = "ITK";
-  version = "4.10.0";
-  src = fetchurl {
-      url = "http://ufpr.dl.sourceforge.net/project/itk/itk/4.10/InsightToolkit-4.10.0.tar.xz";
+  pname = "DWIConvert";
+  version = "4.7.1";
+  src = fetchFromGitHub {
+      owner = "reckbo";
+      name = pname;
       sha256 = "0pxijhqsnwcp9jv1d8p11hsj90k8ajpwxhrnn8kk8c56k7y1207a";
   };
 
