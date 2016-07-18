@@ -7,6 +7,7 @@ let
       ITK = callPackage ./ITK { };
       SlicerExecutionModel = callPackage ./SlicerExecutionModel { };
       DWIConvert = callPackage ./DWIConvert { };
+      teem = callPackage ./teem { };
   };
 in
   self
