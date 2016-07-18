@@ -21,9 +21,9 @@ stdenv.mkDerivation rec {
       "-DModule_ITKIODCMTK=ON"
   ];
 
-  meta = {
+  meta = with stdenv.lib; {
     description = "Medical imaging processing library.";
-    license = "ASL20";
+    license = licenses.asl20;
     homepage = http://itk.org;
   };
 }

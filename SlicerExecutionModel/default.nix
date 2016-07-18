@@ -17,14 +17,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildPhase = '' mkdir $out; cd $out; cmake $src; make'';
-
   installPhase = '' '';
-
-  # mkdir -p $out/share/cmake;
-  # cp *ExecutionModel*.cmake $out/share/cmake;
-  # cp -r CMake $out/share/cmake;
-  # cp -r GenerateCLP $out;
-  # '';
 
   meta = {
     description = "An open-source CMake-based project that provides macros and associated tools for the easy building of 3D Slicer command line interface (CLI) modules.";

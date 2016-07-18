@@ -17,13 +17,9 @@ stdenv.mkDerivation rec {
     SlicerExecutionModel
   ];
 
-  preConfigure = ''
-        export CMAKE_PREFIX_PATH="$CMAKE_PREFIX_PATH:$(echo "${SlicerExecutionModel}/share/cmake/")"
-          '';
-
   meta = with stdenv.lib; {
-    description = "Medical imaging processing library.";
+    description = "Dicom converter.";
     license = licenses.asl20;
-    homepage = http://itk.org;
+    homepage = https://github.com/BRAINSia/BRAINSTools;
   };
 }
