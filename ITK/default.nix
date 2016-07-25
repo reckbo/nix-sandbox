@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
   ];
 
   meta = with stdenv.lib; {
-    description = "Medical imaging processing library.";
+    description = "Medical imaging processing library";
     license = licenses.asl20;
     homepage = http://itk.org;
   };

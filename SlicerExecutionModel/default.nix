@@ -17,10 +17,10 @@ stdenv.mkDerivation rec {
   ];
 
   phases = "unpackPhase buildPhase";
-  buildPhase = '' mkdir $out; cd $out; cmake $src; make'';
+  buildPhase = ''mkdir $out; cd $out; cmake $src; make'';
 
   meta = {
-    description = "An open-source CMake-based project that provides macros and associated tools for the easy building of 3D Slicer command line interface (CLI) modules.";
+    description = "An open-source CMake-based project that provides macros and associated tools for the easy building of 3D Slicer command line interface (CLI) modules";
     license = "3D Slicer Contribution and Software License Agreement (https://www.slicer.org/pages/LicenseText)";
     homepage = https://github.com/Slicer/SlicerExecutionModel;
   };

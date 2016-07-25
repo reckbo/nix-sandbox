@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   ];
 
   meta = with stdenv.lib; {
-    description = "Dicom converter.";
+    description = "Dicom converter";
     license = licenses.asl20;
     homepage = https://github.com/BRAINSia/BRAINSTools;
   };

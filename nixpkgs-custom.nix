@@ -10,4 +10,4 @@ let
       teem = callPackage ./teem { };
   };
 in
-  self
+  pkgs // self
